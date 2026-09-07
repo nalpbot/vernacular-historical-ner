@@ -22,3 +22,28 @@ This repository provides a modular, production-ready pipeline that fine-tunes mu
 ---
 
 ## 🏗️ Architecture & Pipeline Overview
+
+```text
+               +----------------------------------+
+               |  Unstructured Historical Archive |
+               +----------------------------------+
+                                |
+                                v
+               +----------------------------------+
+               | Preprocessing & Sentence Chunking|
+               +----------------------------------+
+                                |
+                                v
+               +----------------------------------+
+               | Custom BIO Tag Alignment Engine  |
+               +----------------------------------+
+                                |
+                                v
+               +----------------------------------+
+               |  mBERT / XLM-RoBERTa + LoRA PEFT |
+               +----------------------------------+
+                                |
+                                v
+               +----------------------------------+
+               | Extracted Entities & Resolution  |
+               +----------------------------------+
